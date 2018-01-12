@@ -30,7 +30,7 @@ function downloadBulks(bookId, folderPath) {
 
     return new Promise((resolve, reject) => {
 	function recur(i) {
-	    const startPage = i > 1 ? bulkSize * i + 1 : 1;
+	    const startPage = bulkSize * i + 1;
 	    const endPage = startPage + bulkSize;
 
 	    return downloadBulk(bookId, startPage, endPage, folderPath)
@@ -43,7 +43,7 @@ function downloadBulks(bookId, folderPath) {
 	    });
 	}
 
-	recur(1);
+	recur(0);
     });
 }
 
