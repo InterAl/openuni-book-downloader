@@ -14,5 +14,5 @@ To download a book, pass the book id and the folder name for the book (no need t
 Then run:
 
 ```bash
-$ node app.js -- bookid foldername
+$ npm start -- bookid foldername
 ```
